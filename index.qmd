@@ -1,0 +1,101 @@
+---
+title: "Alejandro Gómez Echavarría"
+code-copy: false
+pagetitle: "Alejandro Gómez Echavarría"
+image: https://avatars.githubusercontent.com/u/20663394?s=400
+about:
+  template: jolla
+  image-shape: round
+  image-width: 10em
+  links:
+    - icon: github
+      text: GitHub
+      href: https://github.com/AGE90
+    - icon: linkedin
+      text: LinkedIn
+      href: https://www.linkedin.com/in/alejandro-ge
+    - icon: journal-text
+      text: ResearchGate
+      href: https://www.researchgate.net/profile/Alejandro-Gomez-39
+---
+
+[AI Engineer · Data Scientist · DSP Engineer — Medellín, Colombia]{.lead-tagline}
+
+I build models that turn messy signals into decisions. My path runs from acoustical engineering to a master's in modeling and computational science, and from there to credit-risk models, biomedical devices and time-frequency analysis of cardiac signals.
+
+I also write about the frameworks we use to read the world — philosophy of science, complexity, and what chaos theory says about prediction.
+
+::: {.pillars}
+::: {.pillar}
+#### Signals
+Fractional Fourier analysis, wavelets, ECG and atrial electrograms, bioimpedance spectroscopy, environmental acoustics.
+:::
+::: {.pillar}
+#### Models
+Credit default, segmentation, forecasting, LLMs on unstructured data — taken from notebook to pipeline.
+:::
+::: {.pillar}
+#### Ideas
+Critical realism, complexity, and the limits of prediction. [Read the blog →](blog/index.qmd)
+:::
+:::
+
+## A chirp in the fractional Fourier domain
+
+A linear chirp is a tilted streak in the time–frequency plane. The fractional Fourier transform rotates that plane by an angle α; when α lines up with the streak, the signal collapses into a narrow peak. That idea — *optimal compactness* — is the core of my [research on frequency-modulated signals](cv.qmd#publications). Drag the sliders.
+
+```{ojs}
+//| echo: false
+viewof c = Inputs.range([-2, 2], {value: 1, step: 0.05, label: "Chirp rate"})
+viewof alphaDeg = Inputs.range([0, 180], {value: 30, step: 1, label: "Angle α (°)"})
+```
+
+```{ojs}
+//| echo: false
+// Gaussian chirp x(t) = exp(-t²/2s²)·exp(iπct²); its Wigner distribution is the 2-D Gaussian exp(-Q(t,f)).
+s = 1.2
+k = 4 * Math.PI ** 2 * s ** 2
+M = [[1 / s ** 2 + k * c ** 2, -k * c], [-k * c, k]]
+wigner = (t, f) => Math.exp(-(M[0][0] * t * t + 2 * M[0][1] * t * f + M[1][1] * f * f))
+// Marginal on the rotated axis u = t·cosα + f·sinα is |X_α(u)|², a Gaussian with variance vᵀ(2M)⁻¹v.
+varU = a => {
+  const det = M[0][0] * M[1][1] - M[0][1] ** 2, ca = Math.cos(a), sa = Math.sin(a);
+  return (M[1][1] * ca * ca - 2 * M[0][1] * ca * sa + M[0][0] * sa * sa) / (2 * det);
+}
+alpha = alphaDeg * Math.PI / 180
+best = d3.range(0, 180.5, 0.5).reduce((b, d) => varU(d * Math.PI / 180) < varU(b * Math.PI / 180) ? d : b, 0)
+spread = Math.sqrt(varU(alpha))
+```
+
+```{ojs}
+//| echo: false
+Plot.plot({
+  width: 460, height: 460, marginBottom: 44, style: {fontSize: "13px"},
+  x: {domain: [-3, 3], label: "time t", labelAnchor: "center", labelArrow: "none"},
+  y: {domain: [-3, 3], label: "frequency f"},
+  marks: [
+    Plot.raster({x1: -3, x2: 3, y1: -3, y2: 3, pixelSize: 3, fill: "#3987e5", fillOpacity: wigner}),
+    Plot.line([[-3.5 * Math.cos(alpha), -3.5 * Math.sin(alpha)], [3.5 * Math.cos(alpha), 3.5 * Math.sin(alpha)]],
+      {stroke: "currentColor", strokeWidth: 2, strokeDasharray: "4 4", clip: true}),
+    Plot.text([[2.6 * Math.cos(alpha), 2.6 * Math.sin(alpha)]], {text: ["u (α)"], dx: 14, fill: "currentColor"})
+  ]
+})
+```
+```{ojs}
+//| echo: false
+Plot.plot({
+  width: 640, height: 240, marginBottom: 44, style: {fontSize: "13px"},
+  x: {domain: [-3, 3], label: "fractional domain u", labelAnchor: "center", labelArrow: "none"},
+  y: {domain: [0, 1.05], label: "|X_α(u)|² (normalized)", grid: true},
+  marks: [
+    Plot.areaY(d3.range(-3, 3.001, 0.01), {x: d => d, y: u => Math.exp(-u * u / (2 * spread ** 2)), fill: "#3987e5", fillOpacity: 0.15, curve: "basis"}),
+    Plot.lineY(d3.range(-3, 3.001, 0.01), {x: d => d, y: u => Math.exp(-u * u / (2 * spread ** 2)), stroke: "#3987e5", strokeWidth: 2, curve: "basis", tip: true}),
+    Plot.ruleY([0], {stroke: "currentColor", strokeOpacity: 0.3})
+  ]
+})
+```
+
+```{ojs}
+//| echo: false
+md`Spread σ<sub>u</sub> = **${spread.toFixed(3)}** · most compact at α ≈ **${best}°**${Math.abs(alphaDeg - best) < 2 ? " — you found it." : ""}`
+```

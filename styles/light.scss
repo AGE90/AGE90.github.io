@@ -1,0 +1,24 @@
+/*-- scss:defaults --*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=JetBrains+Mono&display=swap');
+
+// Chart chrome & ink from the dataviz reference palette, so figures and page share one system.
+$body-bg: #fcfcfb;
+$body-color: #0b0b0b;
+$body-secondary: #52514e;
+$primary: #2a78d6;
+$link-color: #256abf;
+$border-color: #e1e0d9;
+$navbar-bg: $body-bg;
+$navbar-fg: #52514e;
+$navbar-hl: $primary;
+$footer-bg: $body-bg;
+
+$font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+$headings-font-family: "Source Serif 4", Georgia, serif;
+$font-family-monospace: "JetBrains Mono", ui-monospace, monospace;
+$headings-font-weight: 600;
+$font-size-base: 1.05rem;
+$line-height-base: 1.65;
+
+/*-- scss:rules --*/
+@import "shared";

@@ -1,0 +1,19 @@
+// Rules common to both themes; colors come from each theme's $variables.
+.navbar { border-bottom: 1px solid $border-color; }
+.navbar-title { font-family: $headings-font-family; font-weight: 600; }
+
+.lead-tagline { color: $body-secondary; font-size: 1.15rem; }
+
+// Three "pillars" on the home page
+.pillars { display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.pillar { border: 1px solid $border-color; border-radius: 8px; padding: 1rem 1.1rem; }
+.pillars h4 { margin-top: 0; font-size: 1.05rem; }
+.pillars p { margin: 0; color: $body-secondary; font-size: .95rem; }
+
+// CV timeline
+.timeline { border-left: 2px solid $border-color; padding-left: 1.25rem; margin-left: .25rem; }
+.timeline h3 { margin-top: 1.75rem; position: relative; }
+.timeline h3::before { content: ""; position: absolute; left: calc(-1.25rem - 6px); top: .55em; width: 10px; height: 10px; border-radius: 50%; background: $primary; }
+.when { color: $body-secondary; font-size: .9rem; margin-top: -.4rem; }
+
+.listing-category { font-size: .75rem; }

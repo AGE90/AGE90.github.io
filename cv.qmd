@@ -1,0 +1,66 @@
+---
+title: "Curriculum Vitae"
+description: "Data science, AI engineering and signal processing — from acoustics labs to credit-risk models."
+---
+
+**AI Engineer · Data Scientist · DSP Engineer** based in Medellín, Colombia. MSc in Modeling and Computational Science. Core stack: Python, SQL, MLOps.
+
+## Experience
+
+::: {.timeline}
+
+### Data Scientist — Protección S.A.
+[Dec 2025 – present · Medellín]{.when}
+
+### Data Scientist — Tuya S.A.
+[May 2025 – Dec 2025 · Medellín]{.when}
+
+Customer & Portfolio Insights team. Designed and developed risk models estimating customer default probability, combining advanced analytics, machine learning and data management to support credit-portfolio decisions.
+
+### Artificial Intelligence Engineer — Salva Health
+[Nov 2024 – May 2025 · Medellín]{.when}
+
+- Designed biomedical signal-processing architectures, including spectroscopy and multi-frequency analysis.
+- Developed algorithms to detect physiological patterns associated with tissue anomalies.
+- Trained ML and deep-learning models to classify bioelectrical recordings.
+- Co-designed the data infrastructure for storage, processing and traceability of device data.
+- Worked with biomedical and hardware engineers to integrate device and analysis systems.
+
+### Data Scientist — PTM · Comercial Card S.A.S.
+[Mar 2022 – Nov 2024 · Medellín]{.when}
+
+- Customer segmentation models for personalized services.
+- Time-series forecasting of transactional data for planning and risk management.
+- Credit-origination models and quota-system optimization.
+- ETL pipelines, data visualization, and LLM-based insight extraction from unstructured data.
+
+### Data Engineer — Universidad de San Buenaventura
+[May 2021 – Dec 2021 · Medellín]{.when}
+
+Environmental Acoustics Research Project, Valle de Aburrá. Built the data pipelines behind acoustic-zoning methodologies and the acoustic characterization of the local vehicle fleet, translating measurements into policy recommendations for noise control.
+
+### Acoustical Engineer — NASYL Ingeniería
+[Oct 2018 – Nov 2019 · Colombia]{.when}
+
+Environmental noise and vibration measurement, predictive acoustic modeling, regulatory compliance assessment and mitigation advice.
+
+:::
+
+## Education
+
+- **MSc, Modeling and Computational Science** — Universidad de Medellín (2019 – 2022). Computational and applied mathematics.
+- **Engineering degree** — Universidad de San Buenaventura.
+
+## Publications
+
+Full list and PDFs on [ResearchGate](https://www.researchgate.net/profile/Alejandro-Gomez-39).
+
+- *Quantifying Irregular Morphology Electrograms in Atrial Fibrillation Using Fractional Fourier Domains.*
+- *The Fractional Fourier Transform as a Biomedical Signal and Image Processing Tool: A Review.*
+- *Optimal Compactness of Fractional Fourier Domain Characterizes Frequency Modulated Signals.*
+- *Non-stationary Components in Electrograms Localize Arrhythmogenic Substrates in a 3D Model of Human Atria.*
+- *Bioacoustic Signals Denoising Using the Undecimated Discrete Wavelet Transform.*
+
+## Certifications
+
+FastAPI (introduction, operations, validation & authentication) · Embeddings and Vector Databases for NLP · Professional Machine Learning with Scikit-Learn · Machine Learning · Big Data Fundamentals.

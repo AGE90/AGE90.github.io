@@ -1,0 +1,7 @@
+/.quarto/
+/_site/
+__pycache__/
+# LinkedIn export contains phone/email: never commit
+Profile-*.pdf
+
+**/*.quarto_ipynb

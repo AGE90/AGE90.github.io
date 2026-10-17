@@ -1,0 +1,11 @@
+---
+title: "Projects"
+description: "Open-source work on signals, simulation, time series and optimization."
+listing:
+  contents: projects.yml
+  type: grid
+  grid-columns: 3
+  categories: true
+  sort: false
+  fields: [title, description, categories]
+---

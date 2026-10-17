@@ -1,0 +1,23 @@
+/*-- scss:defaults --*/
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Source+Serif+4:opsz,wght@8..60,500;8..60,600&family=JetBrains+Mono&display=swap');
+
+$body-bg: #1a1a19;
+$body-color: #ffffff;
+$body-secondary: #c3c2b7;
+$primary: #3987e5;
+$link-color: #6da7ec;
+$border-color: #2c2c2a;
+$navbar-bg: $body-bg;
+$navbar-fg: #c3c2b7;
+$navbar-hl: $primary;
+$footer-bg: $body-bg;
+
+$font-family-sans-serif: "Inter", system-ui, -apple-system, "Segoe UI", sans-serif;
+$headings-font-family: "Source Serif 4", Georgia, serif;
+$font-family-monospace: "JetBrains Mono", ui-monospace, monospace;
+$headings-font-weight: 600;
+$font-size-base: 1.05rem;
+$line-height-base: 1.65;
+
+/*-- scss:rules --*/
+@import "shared";

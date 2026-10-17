@@ -1,0 +1,10 @@
+---
+title: "Blog"
+description: "Notes on signals, models, and the frameworks we use to make sense of them."
+listing:
+  contents: "*/index.qmd"
+  type: default
+  sort: "date desc"
+  categories: true
+  fields: [date, title, description, categories, reading-time]
+---

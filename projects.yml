@@ -1,0 +1,28 @@
+- title: PTB-XL Challenge
+  description: ECG classification on the PTB-XL dataset with signal processing and machine learning.
+  categories: [biomedical, signals]
+  path: https://github.com/AGE90/ptbxl-challenge
+- title: Wave Equation Lab
+  description: Numerical solvers for the wave equation, written in C.
+  categories: [simulation, acoustics]
+  path: https://github.com/AGE90/wave-equation-lab
+- title: Time-Series Forecasting
+  description: Classical and deep-learning approaches to forecasting.
+  categories: [time-series]
+  path: https://github.com/AGE90/time-series-forecasting
+- title: Time-Series Clustering
+  description: Grouping time series by shape and dynamics.
+  categories: [time-series, ml]
+  path: https://github.com/AGE90/time-series-clustering
+- title: Metaheuristics for Non-convex Optimization
+  description: Notebooks exploring metaheuristic optimizers on hard landscapes.
+  categories: [optimization]
+  path: https://github.com/AGE90/metaheuristics-for-nonconvex-optimization
+- title: Notes on DSP
+  description: Study notebooks on digital signal processing.
+  categories: [notes, signals]
+  path: https://github.com/AGE90/notes-on-dsp
+- title: Notes on ML
+  description: Study notebooks on machine learning.
+  categories: [notes, ml]
+  path: https://github.com/AGE90/notes-on-ml

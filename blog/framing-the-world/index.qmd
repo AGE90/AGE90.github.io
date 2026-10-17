@@ -1,0 +1,71 @@
+---
+title: "Framing the World"
+subtitle: "Critical realism, positivism, and the lessons of chaos theory"
+description: "How chaos theory, critical realism and constructivism shape our understanding of science, education and reality."
+date: 2025-07-05
+categories: [philosophy, complexity]
+---
+
+*When we try to make sense of the world — through science, education, or ideology — we inevitably use **cognitive frameworks**: ways of seeing and interpreting reality that shape what we consider true, important, or even* real. *Understanding these frameworks is essential not only in academia but in our everyday interpretations of politics, culture, and human behavior.*
+
+In this post I walk through some major cognitive frameworks and explore how a seemingly scientific theory — the **theory of chaos** — can challenge, complement, or even reshape how we think.
+
+## 1. The positivist framework: certainty through measurement
+
+Positivism is one of the oldest and most influential worldviews in modern science. It assumes that:
+
+- Reality is *objective* and can be observed.
+- Knowledge comes from *empirical evidence* and the *scientific method*.
+- The world is *predictable* if we know its laws.
+
+This framework works wonderfully in physics or engineering — but what happens when predictability breaks down?
+
+## 2. Enter chaos: a scientific challenge to predictability
+
+The **theory of chaos** emerged from mathematics and physics to describe systems that are deterministic yet **highly unpredictable** due to extreme sensitivity to initial conditions.
+
+::: {.column-margin}
+Examples: the weather, brain activity, financial markets, ecosystems.
+:::
+
+Chaos theory shows that **small changes can lead to massive differences in outcomes**, even if the system follows deterministic rules. In short: knowing the laws doesn't always mean we can predict what will happen.
+
+This poses a direct challenge to traditional positivism, undermining its assumption of predictability and control.
+
+## 3. Critical realism: a middle path between absolutism and relativism
+
+**Critical realism**, the philosophical framework developed by Roy Bhaskar, recognizes that:
+
+- There is a **real world** out there (it's not just in our heads).
+- But our knowledge of it is always **partial, socially conditioned**, and open to revision.
+- Reality is **stratified**: not everything that exists is directly observable.
+
+Chaos theory fits comfortably here. It supports the idea that reality is **complex, layered, and sometimes beyond immediate empirical grasp**, yet still real and knowable to a degree.
+
+::: {.callout-note appearance="simple"}
+Unlike positivism, critical realism accepts uncertainty and complexity. Unlike extreme constructivism or relativism, it keeps a commitment to truth and objective reality.
+:::
+
+## 4. Constructivism and complexity thinking
+
+In the **constructivist framework**, knowledge is built by individuals and communities — shaped by our experiences, cultures, and languages. Chaos theory is often used metaphorically here:
+
+- Learning is **non-linear**.
+- Small interventions can have big effects.
+- Systems (classrooms, societies, psyches) are **dynamic and emergent**.
+
+This kind of thinking has influenced education, psychology, and organizational theory.
+
+## 5. Why this matters
+
+Whether you're studying education, building AI, or reflecting on politics, the frameworks you adopt shape your questions — and your answers. If we remain unaware of them, we risk:
+
+- Mistaking partial truths for total ones.
+- Silencing alternative perspectives.
+- Falling into **ideological dogmatism** — holding rigid views without room for critique or revision.
+
+By learning from chaos theory and adopting frameworks like **critical realism**, we can embrace **complexity without collapsing into relativism**, and pursue **truth without clinging to certainty**.
+
+## Final thought
+
+The world is messy, unpredictable, and layered — but that doesn't mean we can't understand it. It just means we need better tools, deeper frameworks, and the humility to know that we're always learning.
