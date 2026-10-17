@@ -51,9 +51,9 @@ ul.task-list li input[type="checkbox"] {
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-46bde0743d15085584e985840bca641f.css" rel="stylesheet" class="quarto-color-scheme-extra" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-facbaae61e31b0501d2fae44e691d194.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-3d100697f7d42570d5cfae2702c0dc4c.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/bootstrap/bootstrap-facbaae61e31b0501d2fae44e691d194.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-ccce11d0fd0956f8cf0edd49d12d4749.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark-73b249d478c611e5f064339b536f7bab.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="site_libs/bootstrap/bootstrap-ccce11d0fd0956f8cf0edd49d12d4749.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme-extra" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -91,9 +91,9 @@ ul.task-list li input[type="checkbox"] {
     }
 
     const options = {
-      valueNames: ['listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
+      valueNames: ['listing-image','listing-title','listing-description','listing-categories',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
       
-      searchColumns: ["listing-title","listing-description","listing-categories"],
+      searchColumns: ["listing-title","listing-description","listing-categories","listing-image"],
     };
 
     window['quarto-listings'] = window['quarto-listings'] || {};
@@ -144,7 +144,10 @@ window.Quarto = {
 
 <meta property="og:title" content="Projects – Alejandro Gómez Echavarría">
 <meta property="og:description" content="Open-source work on signals, simulation, time series and optimization.">
+<meta property="og:image" content="https://age90.github.io/images/projects/ptbxl.png">
 <meta property="og:site_name" content="Alejandro Gómez Echavarría">
+<meta property="og:image:height" content="357">
+<meta property="og:image:width" content="1298">
 </head>
 
 <body class="nav-fixed quarto-light"><script id="quarto-html-before-body" type="application/javascript">
@@ -381,7 +384,7 @@ window.Quarto = {
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="YWNvdXN0aWNz">acoustics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YmlvbWVkaWNhbA==">biomedical <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWw=">ml <span class="quarto-category-count">(2)</span></div><div class="category" data-category="bm90ZXM=">notes <span class="quarto-category-count">(2)</span></div><div class="category" data-category="b3B0aW1pemF0aW9u">optimization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2lnbmFscw==">signals <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c2ltdWxhdGlvbg==">simulation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGltZS1zZXJpZXM=">time-series <span class="quarto-category-count">(2)</span></div></div></div>
+    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(7)</span></div><div class="category" data-category="YWNvdXN0aWNz">acoustics <span class="quarto-category-count">(1)</span></div><div class="category" data-category="YmlvbWVkaWNhbA==">biomedical <span class="quarto-category-count">(1)</span></div><div class="category" data-category="ZGVlcC1sZWFybmluZw==">deep-learning <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bWw=">ml <span class="quarto-category-count">(3)</span></div><div class="category" data-category="bWxvcHM=">mlops <span class="quarto-category-count">(1)</span></div><div class="category" data-category="bm90ZXM=">notes <span class="quarto-category-count">(2)</span></div><div class="category" data-category="b3B0aW1pemF0aW9u">optimization <span class="quarto-category-count">(1)</span></div><div class="category" data-category="c2lnbmFscw==">signals <span class="quarto-category-count">(2)</span></div><div class="category" data-category="c2ltdWxhdGlvbg==">simulation <span class="quarto-category-count">(1)</span></div><div class="category" data-category="dGltZS1zZXJpZXM=">time-series <span class="quarto-category-count">(2)</span></div></div></div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
@@ -416,9 +419,12 @@ window.Quarto = {
 
 <div class="quarto-listing quarto-listing-container-grid" id="listing-listing">
 <div class="list grid quarto-listing-cols-3">
-<div class="g-col-1" data-index="0" data-categories="YmlvbWVkaWNhbCUyQ3NpZ25hbHM=">
+<div class="g-col-1" data-index="0" data-categories="YmlvbWVkaWNhbCUyQ3NpZ25hbHMlMkNtbG9wcw==">
 <a href="https://github.com/AGE90/ptbxl-challenge" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="images/projects/ptbxl.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 PTB-XL Challenge
@@ -429,9 +435,11 @@ PTB-XL Challenge
 
 <div class="listing-category" onclick="window.quartoListingCategory('c2lnbmFscw=='); return false;">signals</div>
 
+<div class="listing-category" onclick="window.quartoListingCategory('bWxvcHM='); return false;">mlops</div>
+
 </div>
 <div class="card-text listing-description delink">
-<p>ECG classification on the PTB-XL dataset with signal processing and machine learning.</p>
+<p>ECG classification on PTB-XL. A tested <code>ptbxl</code> package covers filtering and Pan-Tompkins, spectral/wavelet/per-wave features, consensus feature selection and config-driven training tracked in MLflow.</p>
 </div>
 </div>
 </div></a>
@@ -439,6 +447,9 @@ PTB-XL Challenge
 <div class="g-col-1" data-index="1" data-categories="c2ltdWxhdGlvbiUyQ2Fjb3VzdGljcw==">
 <a href="https://github.com/AGE90/wave-equation-lab" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="images/projects/wave.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Wave Equation Lab
@@ -451,25 +462,30 @@ Wave Equation Lab
 
 </div>
 <div class="card-text listing-description delink">
-<p>Numerical solvers for the wave equation, written in C.</p>
+<p>2-D wave propagation sandbox in Python vs C. Finite differences, CFL stability, lenses and media interfaces, Ricker/chirp forcing, absorbing boundaries, animated outputs.</p>
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="2" data-categories="dGltZS1zZXJpZXM=">
+<div class="g-col-1" data-index="2" data-categories="dGltZS1zZXJpZXMlMkNkZWVwLWxlYXJuaW5n">
 <a href="https://github.com/AGE90/time-series-forecasting" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="images/projects/forecasting.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
-Time-Series Forecasting
+Time-Series Forecasting Lab
 </h5>
 <div class="listing-categories">
 
 <div class="listing-category" onclick="window.quartoListingCategory('dGltZS1zZXJpZXM='); return false;">time-series</div>
 
+<div class="listing-category" onclick="window.quartoListingCategory('ZGVlcC1sZWFybmluZw=='); return false;">deep-learning</div>
+
 </div>
 <div class="card-text listing-description delink">
-<p>Classical and deep-learning approaches to forecasting.</p>
+<p>From seasonal naive to TimesFM 3 zero-shot, with ETS, SARIMA, LightGBM and LSTM along the way. Every family runs through the same rolling-origin backtest on Jena climate data.</p>
 </div>
 </div>
 </div></a>
@@ -477,6 +493,9 @@ Time-Series Forecasting
 <div class="g-col-1" data-index="3" data-categories="dGltZS1zZXJpZXMlMkNtbA==">
 <a href="https://github.com/AGE90/time-series-clustering" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="images/projects/clustering.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Time-Series Clustering
@@ -489,14 +508,17 @@ Time-Series Clustering
 
 </div>
 <div class="card-text listing-description delink">
-<p>Grouping time series by shape and dynamics.</p>
+<p>DTW from scratch, then k-means (Euclidean vs DTW/DBA) and k-Shape on UCR Trace. Shift-invariant methods double the ARI over Euclidean clustering.</p>
 </div>
 </div>
 </div></a>
 </div>
-<div class="g-col-1" data-index="4" data-categories="b3B0aW1pemF0aW9u">
+<div class="g-col-1" data-index="4" data-categories="b3B0aW1pemF0aW9uJTJDbWw=">
 <a href="https://github.com/AGE90/metaheuristics-for-nonconvex-optimization" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="images/projects/metaheuristics.gif" class="thumbnail-image card-img" style="height: 200px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Metaheuristics for Non-convex Optimization
@@ -505,9 +527,11 @@ Metaheuristics for Non-convex Optimization
 
 <div class="listing-category" onclick="window.quartoListingCategory('b3B0aW1pemF0aW9u'); return false;">optimization</div>
 
+<div class="listing-category" onclick="window.quartoListingCategory('bWw='); return false;">ml</div>
+
 </div>
 <div class="card-text listing-description delink">
-<p>Notebooks exploring metaheuristic optimizers on hard landscapes.</p>
+<p>GA, PSO, simulated annealing, differential evolution and slime mould implemented from scratch. Includes animated runs on 12 benchmark landscapes and scikit-learn-compatible feature selection and hyperparameter search.</p>
 </div>
 </div>
 </div></a>
@@ -515,6 +539,9 @@ Metaheuristics for Non-convex Optimization
 <div class="g-col-1" data-index="5" data-categories="bm90ZXMlMkNzaWduYWxz">
 <a href="https://github.com/AGE90/notes-on-dsp" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="images/projects/dsp.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Notes on DSP
@@ -527,7 +554,7 @@ Notes on DSP
 
 </div>
 <div class="card-text listing-description delink">
-<p>Study notebooks on digital signal processing.</p>
+<p>A study path from discrete-time signals and vector spaces through the DFT, sampling, filters and time-frequency analysis to fractional Fourier research. Notebooks plus a tested <code>dsp</code> package.</p>
 </div>
 </div>
 </div></a>
@@ -535,6 +562,9 @@ Notes on DSP
 <div class="g-col-1" data-index="6" data-categories="bm90ZXMlMkNtbA==">
 <a href="https://github.com/AGE90/notes-on-ml" class="quarto-grid-link">
 <div class="quarto-grid-item card h-100 card-left">
+<p class="card-img-top">
+<img loading="lazy" src="images/projects/ml.png" class="thumbnail-image card-img" style="height: 200px;">
+</p>
 <div class="card-body post-contents">
 <h5 class="no-anchor card-title listing-title">
 Notes on ML
@@ -547,7 +577,7 @@ Notes on ML
 
 </div>
 <div class="card-text listing-description delink">
-<p>Study notebooks on machine learning.</p>
+<p>A machine-learning knowledge base covering linear algebra and SVD, regression with gradient descent, CG and BFGS, logistic regression, metrics, neural networks and model selection. Each algorithm is implemented and tested in <code>src/ml/</code>.</p>
 </div>
 </div>
 </div></a>
