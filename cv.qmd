@@ -24,7 +24,7 @@ Customer & Portfolio Insights team. Designed and developed risk models estimatin
 - Developed algorithms to detect physiological patterns associated with tissue anomalies.
 - Trained ML and deep-learning models to classify bioelectrical recordings.
 - Co-designed the data infrastructure for storage, processing and traceability of device data.
-- Worked with biomedical and hardware engineers to integrate device and analysis systems.
+- Worked with biomedical and hardware engineers so the analysis pipeline integrated cleanly with the data the device produced.
 
 ### Data Scientist — PTM · Comercial Card S.A.S.
 [Mar 2022 – Nov 2024 · Medellín]{.when}

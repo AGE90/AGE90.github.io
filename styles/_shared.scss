@@ -17,3 +17,6 @@
 .when { color: $body-secondary; font-size: .9rem; margin-top: -.4rem; }
 
 .listing-category { font-size: .75rem; }
+
+// Project cards: show whole figure (most are white-background plots) instead of cropping
+.quarto-grid-item .card-img-top img, .quarto-grid-item img.thumbnail-image { object-fit: contain; background: #fff; padding: .5rem; }

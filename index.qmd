@@ -21,7 +21,7 @@ about:
 
 [AI Engineer · Data Scientist · DSP Engineer — Medellín, Colombia]{.lead-tagline}
 
-I build models that turn messy signals into decisions. My path runs from acoustical engineering to a master's in modeling and computational science, and from there to credit-risk models, biomedical devices and time-frequency analysis of cardiac signals.
+I build models that turn messy signals into decisions. My path runs from acoustical engineering to a master's in modeling and computational science, and from there to credit-risk models, machine learning on biomedical signals and time-frequency analysis of cardiac recordings.
 
 I also write about the frameworks we use to read the world — philosophy of science, complexity, and what chaos theory says about prediction.
 

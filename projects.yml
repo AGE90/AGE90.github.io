@@ -1,28 +1,35 @@
 - title: PTB-XL Challenge
-  description: ECG classification on the PTB-XL dataset with signal processing and machine learning.
-  categories: [biomedical, signals]
+  description: ECG classification on PTB-XL. A tested `ptbxl` package covers filtering and Pan-Tompkins, spectral/wavelet/per-wave features, consensus feature selection and config-driven training tracked in MLflow.
+  categories: [biomedical, signals, mlops]
   path: https://github.com/AGE90/ptbxl-challenge
+  image: images/projects/ptbxl.png
 - title: Wave Equation Lab
-  description: Numerical solvers for the wave equation, written in C.
+  description: 2-D wave propagation sandbox in Python vs C. Finite differences, CFL stability, lenses and media interfaces, Ricker/chirp forcing, absorbing boundaries, animated outputs.
   categories: [simulation, acoustics]
   path: https://github.com/AGE90/wave-equation-lab
-- title: Time-Series Forecasting
-  description: Classical and deep-learning approaches to forecasting.
-  categories: [time-series]
+  image: images/projects/wave.png
+- title: Time-Series Forecasting Lab
+  description: From seasonal naive to TimesFM 3 zero-shot, with ETS, SARIMA, LightGBM and LSTM along the way. Every family runs through the same rolling-origin backtest on Jena climate data.
+  categories: [time-series, deep-learning]
   path: https://github.com/AGE90/time-series-forecasting
+  image: images/projects/forecasting.png
 - title: Time-Series Clustering
-  description: Grouping time series by shape and dynamics.
+  description: DTW from scratch, then k-means (Euclidean vs DTW/DBA) and k-Shape on UCR Trace. Shift-invariant methods double the ARI over Euclidean clustering.
   categories: [time-series, ml]
   path: https://github.com/AGE90/time-series-clustering
+  image: images/projects/clustering.png
 - title: Metaheuristics for Non-convex Optimization
-  description: Notebooks exploring metaheuristic optimizers on hard landscapes.
-  categories: [optimization]
+  description: GA, PSO, simulated annealing, differential evolution and slime mould implemented from scratch. Includes animated runs on 12 benchmark landscapes and scikit-learn-compatible feature selection and hyperparameter search.
+  categories: [optimization, ml]
   path: https://github.com/AGE90/metaheuristics-for-nonconvex-optimization
+  image: images/projects/metaheuristics.gif
 - title: Notes on DSP
-  description: Study notebooks on digital signal processing.
+  description: A study path from discrete-time signals and vector spaces through the DFT, sampling, filters and time-frequency analysis to fractional Fourier research. Notebooks plus a tested `dsp` package.
   categories: [notes, signals]
   path: https://github.com/AGE90/notes-on-dsp
+  image: images/projects/dsp.png
 - title: Notes on ML
-  description: Study notebooks on machine learning.
+  description: A machine-learning knowledge base covering linear algebra and SVD, regression with gradient descent, CG and BFGS, logistic regression, metrics, neural networks and model selection. Each algorithm is implemented and tested in `src/ml/`.
   categories: [notes, ml]
   path: https://github.com/AGE90/notes-on-ml
+  image: images/projects/ml.png

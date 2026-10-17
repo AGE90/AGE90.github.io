@@ -7,5 +7,7 @@ listing:
   grid-columns: 3
   categories: true
   sort: false
-  fields: [title, description, categories]
+  fields: [image, title, description, categories]
+  image-height: 200px
+  max-description-length: 400
 ---
