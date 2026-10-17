@@ -1,0 +1,114 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Alejandro Gómez Echavarría",
+    "section": "",
+    "text": "AI Engineer · Data Scientist · DSP Engineer — Medellín, Colombia\nI build models that turn messy signals into decisions. My path runs from acoustical engineering to a master’s in modeling and computational science, and from there to credit-risk models, biomedical devices and time-frequency analysis of cardiac signals.\nI also write about the frameworks we use to read the world — philosophy of science, complexity, and what chaos theory says about prediction."
+  },
+  {
+    "objectID": "index.html#a-chirp-in-the-fractional-fourier-domain",
+    "href": "index.html#a-chirp-in-the-fractional-fourier-domain",
+    "title": "Alejandro Gómez Echavarría",
+    "section": "A chirp in the fractional Fourier domain",
+    "text": "A chirp in the fractional Fourier domain\nA linear chirp is a tilted streak in the time–frequency plane. The fractional Fourier transform rotates that plane by an angle α; when α lines up with the streak, the signal collapses into a narrow peak. That idea — optimal compactness — is the core of my research on frequency-modulated signals. Drag the sliders.\n\nviewof c = Inputs.range([-2, 2], {value: 1, step: 0.05, label: \"Chirp rate\"})\nviewof alphaDeg = Inputs.range([0, 180], {value: 30, step: 1, label: \"Angle α (°)\"})\n\n\n\n\n\n\n\n\n\n\n\n\n\n\ns = 1.2\nk = 4 * Math.PI ** 2 * s ** 2\nM = [[1 / s ** 2 + k * c ** 2, -k * c], [-k * c, k]]\nwigner = (t, f) =&gt; Math.exp(-(M[0][0] * t * t + 2 * M[0][1] * t * f + M[1][1] * f * f))\n// Marginal on the rotated axis u = t·cosα + f·sinα is |X_α(u)|², a Gaussian with variance vᵀ(2M)⁻¹v.\nvarU = a =&gt; {\n  const det = M[0][0] * M[1][1] - M[0][1] ** 2, ca = Math.cos(a), sa = Math.sin(a);\n  return (M[1][1] * ca * ca - 2 * M[0][1] * ca * sa + M[0][0] * sa * sa) / (2 * det);\n}\nalpha = alphaDeg * Math.PI / 180\nbest = d3.range(0, 180.5, 0.5).reduce((b, d) =&gt; varU(d * Math.PI / 180) &lt; varU(b * Math.PI / 180) ? d : b, 0)\nspread = Math.sqrt(varU(alpha))\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nPlot.plot({\n  width: 460, height: 460, marginBottom: 44, style: {fontSize: \"13px\"},\n  x: {domain: [-3, 3], label: \"time t\", labelAnchor: \"center\", labelArrow: \"none\"},\n  y: {domain: [-3, 3], label: \"frequency f\"},\n  marks: [\n    Plot.raster({x1: -3, x2: 3, y1: -3, y2: 3, pixelSize: 3, fill: \"#3987e5\", fillOpacity: wigner}),\n    Plot.line([[-3.5 * Math.cos(alpha), -3.5 * Math.sin(alpha)], [3.5 * Math.cos(alpha), 3.5 * Math.sin(alpha)]],\n      {stroke: \"currentColor\", strokeWidth: 2, strokeDasharray: \"4 4\", clip: true}),\n    Plot.text([[2.6 * Math.cos(alpha), 2.6 * Math.sin(alpha)]], {text: [\"u (α)\"], dx: 14, fill: \"currentColor\"})\n  ]\n})\n\n\n\n\n\n\nPlot.plot({\n  width: 640, height: 240, marginBottom: 44, style: {fontSize: \"13px\"},\n  x: {domain: [-3, 3], label: \"fractional domain u\", labelAnchor: \"center\", labelArrow: \"none\"},\n  y: {domain: [0, 1.05], label: \"|X_α(u)|² (normalized)\", grid: true},\n  marks: [\n    Plot.areaY(d3.range(-3, 3.001, 0.01), {x: d =&gt; d, y: u =&gt; Math.exp(-u * u / (2 * spread ** 2)), fill: \"#3987e5\", fillOpacity: 0.15, curve: \"basis\"}),\n    Plot.lineY(d3.range(-3, 3.001, 0.01), {x: d =&gt; d, y: u =&gt; Math.exp(-u * u / (2 * spread ** 2)), stroke: \"#3987e5\", strokeWidth: 2, curve: \"basis\", tip: true}),\n    Plot.ruleY([0], {stroke: \"currentColor\", strokeOpacity: 0.3})\n  ]\n})\n\n\n\n\n\n\nmd`Spread σ&lt;sub&gt;u&lt;/sub&gt; = **${spread.toFixed(3)}** · most compact at α ≈ **${best}°**${Math.abs(alphaDeg - best) &lt; 2 ? \" — you found it.\" : \"\"}`"
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Framing the World\n\n\n\nphilosophy\n\ncomplexity\n\n\n\nHow chaos theory, critical realism and constructivism shape our understanding of science, education and reality.\n\n\n\n\n\nJul 5, 2025\n\n3 min\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "cv.html",
+    "href": "cv.html",
+    "title": "Curriculum Vitae",
+    "section": "",
+    "text": "AI Engineer · Data Scientist · DSP Engineer based in Medellín, Colombia. MSc in Modeling and Computational Science. Core stack: Python, SQL, MLOps."
+  },
+  {
+    "objectID": "cv.html#experience",
+    "href": "cv.html#experience",
+    "title": "Curriculum Vitae",
+    "section": "Experience",
+    "text": "Experience\n\n\nData Scientist — Protección S.A.\nDec 2025 – present · Medellín\n\n\nData Scientist — Tuya S.A.\nMay 2025 – Dec 2025 · Medellín\nCustomer & Portfolio Insights team. Designed and developed risk models estimating customer default probability, combining advanced analytics, machine learning and data management to support credit-portfolio decisions.\n\n\nArtificial Intelligence Engineer — Salva Health\nNov 2024 – May 2025 · Medellín\n\nDesigned biomedical signal-processing architectures, including spectroscopy and multi-frequency analysis.\nDeveloped algorithms to detect physiological patterns associated with tissue anomalies.\nTrained ML and deep-learning models to classify bioelectrical recordings.\nCo-designed the data infrastructure for storage, processing and traceability of device data.\nWorked with biomedical and hardware engineers to integrate device and analysis systems.\n\n\n\nData Scientist — PTM · Comercial Card S.A.S.\nMar 2022 – Nov 2024 · Medellín\n\nCustomer segmentation models for personalized services.\nTime-series forecasting of transactional data for planning and risk management.\nCredit-origination models and quota-system optimization.\nETL pipelines, data visualization, and LLM-based insight extraction from unstructured data.\n\n\n\nData Engineer — Universidad de San Buenaventura\nMay 2021 – Dec 2021 · Medellín\nEnvironmental Acoustics Research Project, Valle de Aburrá. Built the data pipelines behind acoustic-zoning methodologies and the acoustic characterization of the local vehicle fleet, translating measurements into policy recommendations for noise control.\n\n\nAcoustical Engineer — NASYL Ingeniería\nOct 2018 – Nov 2019 · Colombia\nEnvironmental noise and vibration measurement, predictive acoustic modeling, regulatory compliance assessment and mitigation advice."
+  },
+  {
+    "objectID": "cv.html#education",
+    "href": "cv.html#education",
+    "title": "Curriculum Vitae",
+    "section": "Education",
+    "text": "Education\n\nMSc, Modeling and Computational Science — Universidad de Medellín (2019 – 2022). Computational and applied mathematics.\nEngineering degree — Universidad de San Buenaventura."
+  },
+  {
+    "objectID": "cv.html#publications",
+    "href": "cv.html#publications",
+    "title": "Curriculum Vitae",
+    "section": "Publications",
+    "text": "Publications\nFull list and PDFs on ResearchGate.\n\nQuantifying Irregular Morphology Electrograms in Atrial Fibrillation Using Fractional Fourier Domains.\nThe Fractional Fourier Transform as a Biomedical Signal and Image Processing Tool: A Review.\nOptimal Compactness of Fractional Fourier Domain Characterizes Frequency Modulated Signals.\nNon-stationary Components in Electrograms Localize Arrhythmogenic Substrates in a 3D Model of Human Atria.\nBioacoustic Signals Denoising Using the Undecimated Discrete Wavelet Transform."
+  },
+  {
+    "objectID": "cv.html#certifications",
+    "href": "cv.html#certifications",
+    "title": "Curriculum Vitae",
+    "section": "Certifications",
+    "text": "Certifications\nFastAPI (introduction, operations, validation & authentication) · Embeddings and Vector Databases for NLP · Professional Machine Learning with Scikit-Learn · Machine Learning · Big Data Fundamentals."
+  },
+  {
+    "objectID": "blog/framing-the-world/index.html",
+    "href": "blog/framing-the-world/index.html",
+    "title": "Framing the World",
+    "section": "",
+    "text": "When we try to make sense of the world — through science, education, or ideology — we inevitably use cognitive frameworks: ways of seeing and interpreting reality that shape what we consider true, important, or even real. Understanding these frameworks is essential not only in academia but in our everyday interpretations of politics, culture, and human behavior.\nIn this post I walk through some major cognitive frameworks and explore how a seemingly scientific theory — the theory of chaos — can challenge, complement, or even reshape how we think."
+  },
+  {
+    "objectID": "blog/framing-the-world/index.html#the-positivist-framework-certainty-through-measurement",
+    "href": "blog/framing-the-world/index.html#the-positivist-framework-certainty-through-measurement",
+    "title": "Framing the World",
+    "section": "1. The positivist framework: certainty through measurement",
+    "text": "1. The positivist framework: certainty through measurement\nPositivism is one of the oldest and most influential worldviews in modern science. It assumes that:\n\nReality is objective and can be observed.\nKnowledge comes from empirical evidence and the scientific method.\nThe world is predictable if we know its laws.\n\nThis framework works wonderfully in physics or engineering — but what happens when predictability breaks down?"
+  },
+  {
+    "objectID": "blog/framing-the-world/index.html#enter-chaos-a-scientific-challenge-to-predictability",
+    "href": "blog/framing-the-world/index.html#enter-chaos-a-scientific-challenge-to-predictability",
+    "title": "Framing the World",
+    "section": "2. Enter chaos: a scientific challenge to predictability",
+    "text": "2. Enter chaos: a scientific challenge to predictability\nThe theory of chaos emerged from mathematics and physics to describe systems that are deterministic yet highly unpredictable due to extreme sensitivity to initial conditions.\n\n\nExamples: the weather, brain activity, financial markets, ecosystems.\nChaos theory shows that small changes can lead to massive differences in outcomes, even if the system follows deterministic rules. In short: knowing the laws doesn’t always mean we can predict what will happen.\nThis poses a direct challenge to traditional positivism, undermining its assumption of predictability and control."
+  },
+  {
+    "objectID": "blog/framing-the-world/index.html#critical-realism-a-middle-path-between-absolutism-and-relativism",
+    "href": "blog/framing-the-world/index.html#critical-realism-a-middle-path-between-absolutism-and-relativism",
+    "title": "Framing the World",
+    "section": "3. Critical realism: a middle path between absolutism and relativism",
+    "text": "3. Critical realism: a middle path between absolutism and relativism\nCritical realism, the philosophical framework developed by Roy Bhaskar, recognizes that:\n\nThere is a real world out there (it’s not just in our heads).\nBut our knowledge of it is always partial, socially conditioned, and open to revision.\nReality is stratified: not everything that exists is directly observable.\n\nChaos theory fits comfortably here. It supports the idea that reality is complex, layered, and sometimes beyond immediate empirical grasp, yet still real and knowable to a degree.\n\n\n\n\n\n\nUnlike positivism, critical realism accepts uncertainty and complexity. Unlike extreme constructivism or relativism, it keeps a commitment to truth and objective reality."
+  },
+  {
+    "objectID": "blog/framing-the-world/index.html#constructivism-and-complexity-thinking",
+    "href": "blog/framing-the-world/index.html#constructivism-and-complexity-thinking",
+    "title": "Framing the World",
+    "section": "4. Constructivism and complexity thinking",
+    "text": "4. Constructivism and complexity thinking\nIn the constructivist framework, knowledge is built by individuals and communities — shaped by our experiences, cultures, and languages. Chaos theory is often used metaphorically here:\n\nLearning is non-linear.\nSmall interventions can have big effects.\nSystems (classrooms, societies, psyches) are dynamic and emergent.\n\nThis kind of thinking has influenced education, psychology, and organizational theory."
+  },
+  {
+    "objectID": "blog/framing-the-world/index.html#why-this-matters",
+    "href": "blog/framing-the-world/index.html#why-this-matters",
+    "title": "Framing the World",
+    "section": "5. Why this matters",
+    "text": "5. Why this matters\nWhether you’re studying education, building AI, or reflecting on politics, the frameworks you adopt shape your questions — and your answers. If we remain unaware of them, we risk:\n\nMistaking partial truths for total ones.\nSilencing alternative perspectives.\nFalling into ideological dogmatism — holding rigid views without room for critique or revision.\n\nBy learning from chaos theory and adopting frameworks like critical realism, we can embrace complexity without collapsing into relativism, and pursue truth without clinging to certainty."
+  },
+  {
+    "objectID": "blog/framing-the-world/index.html#final-thought",
+    "href": "blog/framing-the-world/index.html#final-thought",
+    "title": "Framing the World",
+    "section": "Final thought",
+    "text": "Final thought\nThe world is messy, unpredictable, and layered — but that doesn’t mean we can’t understand it. It just means we need better tools, deeper frameworks, and the humility to know that we’re always learning."
+  },
+  {
+    "objectID": "projects.html",
+    "href": "projects.html",
+    "title": "Projects",
+    "section": "",
+    "text": "PTB-XL Challenge\n\n\n\nbiomedical\n\nsignals\n\n\n\nECG classification on the PTB-XL dataset with signal processing and machine learning.\n\n\n\n\n\n\n\n\n\nWave Equation Lab\n\n\n\nsimulation\n\nacoustics\n\n\n\nNumerical solvers for the wave equation, written in C.\n\n\n\n\n\n\n\n\n\nTime-Series Forecasting\n\n\n\ntime-series\n\n\n\nClassical and deep-learning approaches to forecasting.\n\n\n\n\n\n\n\n\n\nTime-Series Clustering\n\n\n\ntime-series\n\nml\n\n\n\nGrouping time series by shape and dynamics.\n\n\n\n\n\n\n\n\n\nMetaheuristics for Non-convex Optimization\n\n\n\noptimization\n\n\n\nNotebooks exploring metaheuristic optimizers on hard landscapes.\n\n\n\n\n\n\n\n\n\nNotes on DSP\n\n\n\nnotes\n\nsignals\n\n\n\nStudy notebooks on digital signal processing.\n\n\n\n\n\n\n\n\n\nNotes on ML\n\n\n\nnotes\n\nml\n\n\n\nStudy notebooks on machine learning.\n\n\n\n\n\nNo matching items"
+  }
+]
