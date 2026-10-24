@@ -12,6 +12,14 @@ description: "Data science, AI engineering and signal processing — from acoust
 ### Data Scientist — Protección S.A.
 [Dec 2025 – present · Medellín]{.when}
 
+Operational Excellence team, embedded with the Operations & Service Center. I work in a forward-deployed way: sitting close to the operation, understanding its pain points first-hand, and turning them into data-driven solutions shipped in short cycles, with AI as a force multiplier.
+
+Currently working on the **digital twins** strategy for multiple operational value streams: an analytical layer on top of each value stream built around three capabilities:
+
+- **Observe** — analyze the data each value stream generates to surface bottlenecks, friction points, anomalies and operational risks.
+- **Simulate** — model the stream from its data to anticipate events, detect anomalies and test optimization scenarios before touching the real process.
+- **Act** — close the loop with dynamic alerting and automations that improve how the value stream runs day to day.
+
 ### Data Scientist — Tuya S.A.
 [May 2025 – Dec 2025 · Medellín]{.when}
 
