@@ -32,4 +32,4 @@
   description: A machine-learning knowledge base covering linear algebra and SVD, regression with gradient descent, CG and BFGS, logistic regression, metrics, neural networks and model selection. Each algorithm is implemented and tested in `src/ml/`.
   categories: [notes, ml]
   path: https://github.com/AGE90/notes-on-ml
-  image: images/projects/ml.png
+  image: images/projects/ml_mind_map.png
